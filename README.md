@@ -1,4 +1,4 @@
-[![NPM version](https://badge.fury.io/js/grunt-stylelint.svg)](http://badge.fury.io/js/grunt-stylelint) [![Build Status](https://travis-ci.org/wikimedia/grunt-stylelint.svg?branch=master)](https://travis-ci.org/wikimedia/grunt-stylelint)
+[![NPM version](https://badge.fury.io/js/grunt-stylelint.svg)](http://badge.fury.io/js/grunt-stylelint) [![Build Status](https://travis-ci.org/wikimedia/grunt-stylelint.svg?branch=master)](https://travis-ci.org/wikimedia/grunt-stylelint) [![devDependency Status](https://david-dm.org/wikimedia/grunt-stylelint/dev-status.svg)](https://david-dm.org/wikimedia/grunt-stylelint#info=devDependencies)
 
 # grunt-stylelint
 > Grunt plugin for running Stylelint
