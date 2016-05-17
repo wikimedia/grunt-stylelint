@@ -6,17 +6,13 @@
 module.exports = function ( grunt ) {
 
 	grunt.registerMultiTask( 'stylelint', function () {
-		var options = this.options( {
-				stylelintrc: '.stylelintrc'
-			} ),
+		var options = this.options(),
 			done = this.async(),
-			files = this.filesSrc,
 			styleLint = require( 'stylelint' );
 
-		styleLint.lint( {
-			configFile: options.stylelintrc,
-			files: files
-		} ).then( function ( data ) {
+		options.files = this.filesSrc;
+
+		styleLint.lint( options ).then( function ( data ) {
 			data.results.forEach( function ( result ) {
 				if ( !result.errored ) {
 					grunt.verbose.ok( 'File ' + result.source + ' passes' );
@@ -33,7 +29,7 @@ module.exports = function ( grunt ) {
 			} );
 
 			if ( !data.errored ) {
-				grunt.log.ok( 'Linted ' + files.length + ' files without errors' );
+				grunt.log.ok( 'Linted ' + options.files.length + ' files without errors' );
 				done();
 			} else {
 				done( false );
