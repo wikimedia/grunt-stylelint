@@ -1,0 +1,14 @@
+{
+	// Enforcing
+	"bitwise": true,
+	"eqeqeq": true,
+	"freeze": true,
+	"latedef": true,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"nonew": true,
+	"undef": true,
+	"unused": true,
+	"strict": false
+}

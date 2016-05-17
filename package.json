@@ -1,0 +1,32 @@
+{
+  "name": "grunt-stylelint",
+  "version": "0.1.0",
+  "description": "A grunt checker for CSS files using Stylelint",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wikimedia/grunt-stylelint.git"
+  },
+  "keywords": [
+    "gruntplugin",
+    "checker",
+    "stylelint"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wikimedia/grunt-stylelint/issues"
+  },
+  "homepage": "https://github.com/wikimedia/grunt-stylelint",
+  "dependencies": {
+      "stylelint": "6.3.3"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-jscs": "2.8.0"
+  }
+}
