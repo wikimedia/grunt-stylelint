@@ -14,44 +14,35 @@ module.exports = function ( grunt ) {
 			styleLint = require( 'stylelint' );
 
 		styleLint.lint( {
-				configFile: options.stylelintrc,
-				files: files,
-				format: 'json'
-			} )
-			.then( function ( data ) {
-				var i, j, warning;
-
-				for ( i in data.results ) {
-					if ( data.results.hasOwnProperty( i ) ) {
-						if ( !data.results[ i ].errored ) {
-							grunt.verbose.ok( 'File ' + data.results[ i ].source + ' passes' );
-						} else {
-							grunt.log.error( data.results[ i ].source + ' failed:' );
-							for ( j in data.results[ i ].warnings ) {
-								if ( data.results[ i ].warnings.hasOwnProperty( j ) ) {
-									warning = data.results[ i ].warnings[ j ];
-									grunt.log.error(
-										'Line ' + warning.line + ', column ' + warning.column + ': ' +
-										warning.text + ' (' + warning.severity + ')'
-									);
-								}
-							}
-							grunt.log.writeln();
-						}
-					}
-				}
-
-				if ( !data.errored ) {
-					grunt.log.ok( 'Linted ' + files.length + ' files OK' );
-					done();
+			configFile: options.stylelintrc,
+			files: files
+		} ).then( function ( data ) {
+			data.results.forEach( function ( result ) {
+				if ( !result.errored ) {
+					grunt.verbose.ok( 'File ' + result.source + ' passes' );
 				} else {
-					done( false );
+					grunt.log.error( result.source + ' failed:' );
+					result.warnings.forEach( function ( warning ) {
+						grunt.log.error(
+							'Line ' + warning.line + ', column ' + warning.column + ': ' +
+							warning.text + ' (' + warning.severity + ')'
+						);
+					} );
+					grunt.log.writeln();
 				}
-			}, function ( promiseFailure ) {
-				grunt.fail.warn( 'Running stylelint failed: ', promiseFailure );
-
-				done( false );
 			} );
+
+			if ( !data.errored ) {
+				grunt.log.ok( 'Linted ' + files.length + ' files without errors' );
+				done();
+			} else {
+				done( false );
+			}
+		}, function ( promiseFailure ) {
+			grunt.fail.warn( 'Running stylelint failed: ', promiseFailure );
+
+			done( false );
+		} );
 	} );
 
 };
