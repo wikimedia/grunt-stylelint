@@ -34,8 +34,8 @@ module.exports = function ( grunt ) {
 			} else {
 				done( false );
 			}
-		}, function ( promiseFailure ) {
-			grunt.fail.warn( 'Running stylelint failed: ', promiseFailure );
+		}, function ( err ) {
+			grunt.fail.warn( 'Running stylelint failed\n' + err.stack.toString() );
 
 			done( false );
 		} );
