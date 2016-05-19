@@ -10,7 +10,9 @@ module.exports = function ( grunt ) {
 			done = this.async(),
 			styleLint = require( 'stylelint' );
 
-		options.files = this.filesSrc;
+		options.files = this.filesSrc.filter( function ( file ) {
+			return grunt.file.isFile( file );
+		} );
 
 		styleLint.lint( options ).then( function ( data ) {
 			data.results.forEach( function ( result ) {
