@@ -8,22 +8,19 @@ module.exports = function ( grunt ) {
 	grunt.registerMultiTask( 'stylelint', function () {
 		var options = this.options(),
 			done = this.async(),
-			styleLint = require( 'stylelint' );
+			styleLint = require( 'stylelint' ),
+			verbose = !!grunt.option( 'verbose' );
 
 		options.files = this.filesSrc.filter( function ( file ) {
 			return grunt.file.isFile( file );
 		} );
-		options.formatter = 'string';
+		options.formatter = verbose ? 'verbose' : 'string';
 
 		styleLint.lint( options ).then( function ( data ) {
-			data.results.forEach( function ( result ) {
-				if ( !result.errored ) {
-					grunt.verbose.ok( 'File ' + result.source + ' passes' );
-				}
-			} );
-
 			if ( data.output ) {
-				if ( data.errored ) {
+				if ( verbose ) {
+					grunt.log.write( data.output );
+				} else if ( data.errored ) {
 					grunt.log.warn( data.output );
 				} else {
 					grunt.log.ok( data.output );
