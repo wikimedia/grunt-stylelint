@@ -13,22 +13,22 @@ module.exports = function ( grunt ) {
 		options.files = this.filesSrc.filter( function ( file ) {
 			return grunt.file.isFile( file );
 		} );
+		options.formatter = 'string';
 
 		styleLint.lint( options ).then( function ( data ) {
 			data.results.forEach( function ( result ) {
 				if ( !result.errored ) {
 					grunt.verbose.ok( 'File ' + result.source + ' passes' );
-				} else {
-					grunt.log.error( result.source + ' failed:' );
-					result.warnings.forEach( function ( warning ) {
-						grunt.log.error(
-							'Line ' + warning.line + ', column ' + warning.column + ': ' +
-							warning.text + ' (' + warning.severity + ')'
-						);
-					} );
-					grunt.log.writeln();
 				}
 			} );
+
+			if ( data.output ) {
+				if ( data.errored ) {
+					grunt.log.warn( data.output );
+				} else {
+					grunt.log.ok( data.output );
+				}
+			}
 
 			if ( !data.errored ) {
 				grunt.log.ok( 'Linted ' + options.files.length + ' files without errors' );
