@@ -19,12 +19,22 @@ module.exports = function ( grunt ) {
 		jscs: {
 			src: '<%= jshint.all %>'
 		},
+		stylelint: {
+			simple: {
+				options: {
+					configFile: 'test/simple/.stylelintrc',
+					format: 'less'
+				},
+				src: 'test/simple/**/*.{css,less}'
+			}
+		},
 		watch: {
 			files: [ '<%= jshint.all %>', '.{jshintrc,jshintignore}' ],
 			tasks: [ 'test' ]
 		}
 	} );
 
-	grunt.registerTask( 'test', [ 'jshint', 'jscs' ] );
+	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
+	grunt.registerTask( 'test', [ 'lint', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };
