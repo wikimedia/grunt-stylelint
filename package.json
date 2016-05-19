@@ -1,7 +1,7 @@
 {
   "name": "grunt-stylelint",
   "version": "0.2.0",
-  "description": "A grunt checker for CSS files using Stylelint",
+  "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
     "test": "grunt test"
   },
