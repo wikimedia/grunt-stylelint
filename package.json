@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wikimedia/grunt-stylelint",
   "dependencies": {
-      "stylelint": "6.3.3"
+      "stylelint": "6.5.1"
   },
   "devDependencies": {
     "grunt": "1.0.1",
