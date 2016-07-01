@@ -1,5 +1,8 @@
 # grunt-stylelint Release History
 
+## v0.5.0 / 2016-07-01
+* Bump stylelint 6.5.1 -> ^6.8.0 (Radu Micu)
+
 ## v0.4.0 / 2016-06-07
 * Use default string formatter for output (Ed Sanders)
 * Use built-in verbose formatter (Ed Sanders)
