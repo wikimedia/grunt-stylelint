@@ -1,8 +1,15 @@
 sudo: false
 language: node_js
+cache:
+  directories:
+    - node_modules
 node_js:
   - "4"
   - "6"
+before_install:
+  # remove outdated deps, assists with cache maintenance
+  - npm prune
+  - npm update
 notifications:
   irc:
     channels:
