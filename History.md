@@ -1,5 +1,8 @@
 # grunt-stylelint Release History
 
+## v0.7.0 / 2016-08-12
+* Bump stylelint ^7.0.0 -> ^7.1.0 (Dan Poltawski)
+
 ## v0.6.0 / 2016-07-29
 * Travis CI: Cache NPM modules (Stephen Edgar)
 * Travis CI: Test on latest Node.js v4.x.x and v6.x.x branches (Stephen Edgar)
