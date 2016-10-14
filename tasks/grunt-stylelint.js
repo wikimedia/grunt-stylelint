@@ -14,7 +14,7 @@ module.exports = function ( grunt ) {
 		options.files = this.filesSrc.filter( function ( file ) {
 			return grunt.file.isFile( file );
 		} );
-		options.formatter = verbose ? 'verbose' : 'string';
+		options.formatter = options.formatter || ( verbose ? 'verbose' : 'string' );
 
 		styleLint.lint( options ).then( function ( data ) {
 			if ( data.output ) {
