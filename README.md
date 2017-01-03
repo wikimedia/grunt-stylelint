@@ -5,7 +5,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint) 
 
 # grunt-stylelint
-> Grunt plugin for running Stylelint
+> Grunt plugin for running stylelint
 
 ## Getting started
 
@@ -23,13 +23,13 @@ In your Gruntfile, add the line:
 grunt.loadNpmTasks( 'grunt-stylelint' );
 </pre>
 
-## Stylelint task
+## stylelint task
 
 _Run this task with the `grunt stylelint` command._
 
 You can specify the targets and options for the task using the normal Grunt configuration – see Grunt's [guide on how to configure tasks](http://gruntjs.com/configuring-tasks) in general.
 
-For more explanations of the lint errors Stylelint will throw at you please visit http://stylelint.io/.
+For more explanations of the lint errors stylelint will throw at you please visit http://stylelint.io/.
 
 ### Usage examples
 
