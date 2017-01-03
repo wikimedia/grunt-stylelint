@@ -33,7 +33,7 @@ For more explanations of the lint errors Stylelint will throw at you please visi
 
 ### Usage examples
 
-In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and SASS files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project.
+In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and SASS files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project. For an example config see http://stylelint.io/user-guide/example-config/.
 
 ```js
 // Project configuration.
