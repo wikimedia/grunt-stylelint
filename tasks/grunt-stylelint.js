@@ -1,8 +1,22 @@
 /*!
  * Run CSS files through stylelint and complain
  */
+var chalk = require( 'chalk' );
 
 module.exports = function ( grunt ) {
+
+	function pluralize( word, count ) {
+		return ( count === 1 ? word : word + 's' );
+	}
+
+	function output( outputFile, report, func ) {
+		if ( outputFile ) {
+			grunt.file.write( outputFile, report );
+			grunt.log.writeln( 'Report written to ' + outputFile );
+		} else {
+			func( report );
+		}
+	}
 
 	grunt.registerMultiTask( 'stylelint', function () {
 		var options = this.options(),
@@ -16,14 +30,26 @@ module.exports = function ( grunt ) {
 		options.formatter = options.formatter || ( verbose ? 'verbose' : 'string' );
 
 		styleLint.lint( options ).then( function ( data ) {
+			var warningsCount = 0;
+
 			if ( data.output ) {
 				if ( verbose ) {
-					grunt.log.write( data.output );
+					output( options.outputFile, data.output, grunt.log.write );
 				} else if ( data.errored ) {
-					grunt.log.warn( data.output );
+					output( options.outputFile, data.output, grunt.log.write );
 				} else {
-					grunt.log.ok( data.output );
+					output( options.outputFile, data.output, grunt.log.ok );
 				}
+			}
+
+			warningsCount = data.results.reduce( function ( count, item ) {
+				return ( count + item.warnings.length );
+			}, 0 );
+
+			if ( warningsCount > 0 ) {
+				grunt.log.writeln( chalk.red.bold( [
+					'\u2716 ', warningsCount, pluralize( ' problem', warningsCount ), '\n'
+				].join( '' ) ) );
 			}
 
 			if ( !data.errored ) {
