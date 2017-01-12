@@ -5,7 +5,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint)
 
 # grunt-stylelint
-> Grunt plugin for running [stylelint](http://stylelint.io/)
+Grunt plugin for running [stylelint](http://stylelint.io/)
 
 ## Getting started
 
@@ -33,7 +33,7 @@ For more explanations of the lint errors stylelint will throw at you please visi
 
 ### Usage examples
 
-In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and SASS files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project. For an example config see http://stylelint.io/user-guide/example-config/.
+In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and Sass files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project. For an example config see http://stylelint.io/user-guide/example-config/.
 
 ```js
 // Project configuration.
