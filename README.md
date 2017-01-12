@@ -2,10 +2,10 @@
 [![Build Status](https://travis-ci.org/wikimedia/grunt-stylelint.svg?branch=master)](https://travis-ci.org/wikimedia/grunt-stylelint)
 [![dependencies Status](https://david-dm.org/wikimedia/grunt-stylelint/status.svg)](https://david-dm.org/wikimedia/grunt-stylelint)
 [![devDependencies Status](https://david-dm.org/wikimedia/grunt-stylelint/dev-status.svg)](https://david-dm.org/wikimedia/grunt-stylelint?type=dev)
-[![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint) 
+[![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint)
 
 # grunt-stylelint
-> Grunt plugin for running stylelint
+> Grunt plugin for running [stylelint](http://stylelint.io/)
 
 ## Getting started
 
@@ -23,7 +23,7 @@ In your Gruntfile, add the line:
 grunt.loadNpmTasks( 'grunt-stylelint' );
 </pre>
 
-## stylelint task
+## Running and configuring `stylelint` task
 
 _Run this task with the `grunt stylelint` command._
 
@@ -43,3 +43,30 @@ grunt.initConfig({
   }
 });
 ```
+
+The `options` object is passed through to `stylelint`. Options you may wish to set are:
+
+#### formatter
+Type: `string`
+Default value: `"string"`
+Values: `"string"`|`"verbose"`|`"json"`
+
+Which output format in which you would like results. If `grunt` is run with `--verbose` and this is not explicitly set, it will act as though you passed in `"verbose"`.
+
+#### syntax
+Type: `string`
+Values: `"scss"`|`"less"`|`"sugarss"`
+
+Which syntax standard should be used to parse source stylesheets. If this is unset, `stylelint` will attempt to guess which syntax is used by the files' extensions.
+
+#### ignoreDisables
+Type: `boolean`
+Default vaue: `false`
+
+Whether to ignore inline comments that disable stylelint.
+
+#### reportNeedlessDisables
+Type: `boolean`
+Default vaue: `false`
+
+Whether to ignore inline comments that disable stylelint and report which ones did not block a lint warning.
