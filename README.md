@@ -5,10 +5,9 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint)
 
 # grunt-stylelint
-> Grunt plugin for running Stylelint
+Grunt plugin for running [stylelint](http://stylelint.io/)
 
-Getting started
---------------------
+## Getting started
 
 If this is the first time you're using [Grunt](http://gruntjs.com/), the [getting started guide](http://gruntjs.com/getting-started) will show you how to get up and running.
 
@@ -24,12 +23,26 @@ In your Gruntfile, add the line:
 grunt.loadNpmTasks( 'grunt-stylelint' );
 </pre>
 
-Running and configuring
---------------------
+## Running and configuring `stylelint` task
 
 _Run this task with the `grunt stylelint` command._
 
 You can specify the targets and options for the task using the normal Grunt configuration – see Grunt's [guide on how to configure tasks](http://gruntjs.com/configuring-tasks) in general.
+
+For more explanations of the lint errors stylelint will throw at you please visit http://stylelint.io/.
+
+### Usage examples
+
+In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and Sass files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project. For an example config see http://stylelint.io/user-guide/example-config/.
+
+```js
+// Project configuration.
+grunt.initConfig({
+  stylelint: {
+    all: ['css/**/*.css', 'sass/**/*.scss']
+  }
+});
+```
 
 The `options` object is passed through to `stylelint`. Options you may wish to set are:
 
