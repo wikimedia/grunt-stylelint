@@ -47,26 +47,31 @@ grunt.initConfig({
 The `options` object is passed through to `stylelint`. Options you may wish to set are:
 
 #### formatter
-Type: `string`
+Type: `function` or `string`
 Default value: `"string"`
 Values: `"string"`|`"verbose"`|`"json"`
 
 Which output format in which you would like results. If `grunt` is run with `--verbose` and this is not explicitly set, it will act as though you passed in `"verbose"`.
+
+#### ignoreDisables
+Type: `boolean`
+Default value: `false`
+
+Whether to ignore inline comments that disable stylelint.
+
+#### outputFile
+Type: `string`
+
+Output the report to a file.
+
+#### reportNeedlessDisables
+Type: `boolean`
+Default value: `false`
+
+Whether to ignore inline comments that disable stylelint and report which ones did not block a lint warning.
 
 #### syntax
 Type: `string`
 Values: `"scss"`|`"less"`|`"sugarss"`
 
 Which syntax standard should be used to parse source stylesheets. If this is unset, `stylelint` will attempt to guess which syntax is used by the files' extensions.
-
-#### ignoreDisables
-Type: `boolean`
-Default vaue: `false`
-
-Whether to ignore inline comments that disable stylelint.
-
-#### reportNeedlessDisables
-Type: `boolean`
-Default vaue: `false`
-
-Whether to ignore inline comments that disable stylelint and report which ones did not block a lint warning.
