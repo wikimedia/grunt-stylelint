@@ -24,6 +24,8 @@ module.exports = function ( grunt ) {
 			styleLint = require( 'stylelint' ),
 			verbose = !!grunt.option( 'verbose' );
 
+		options.failOnError = ( typeof options.failOnError !== 'undefined' ) ? options.failOnError : true;
+
 		options.files = this.filesSrc.filter( function ( file ) {
 			return grunt.file.isFile( file );
 		} );
@@ -46,17 +48,16 @@ module.exports = function ( grunt ) {
 				return ( count + item.warnings.length );
 			}, 0 );
 
-			if ( warningsCount > 0 ) {
-				grunt.log.writeln( chalk.red.bold( [
-					'\u2716 ', warningsCount, pluralize( ' problem', warningsCount ), '\n'
-				].join( '' ) ) );
-			}
-
 			if ( !data.errored ) {
 				grunt.log.ok( 'Linted ' + options.files.length + ' files without errors' );
 				done();
 			} else {
-				done( false );
+				if ( options.failOnError && warningsCount > 0 ) {
+					grunt.log.writeln( chalk.red.bold( [
+						'\u2716 ', warningsCount, pluralize( ' problem', warningsCount ), '\n'
+					].join( '' ) ) );
+				}
+				done( !options.failOnError );
 			}
 		}, function ( err ) {
 			grunt.fail.warn( 'Running stylelint failed\n' + err.stack.toString() );
