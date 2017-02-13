@@ -2,7 +2,6 @@
  * Run CSS files through stylelint and complain
  */
 
-/*jshint node:true */
 module.exports = function ( grunt ) {
 
 	grunt.registerMultiTask( 'stylelint', function () {
