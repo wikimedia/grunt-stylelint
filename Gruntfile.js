@@ -2,22 +2,14 @@
  * Grunt file
  */
 
-/*jshint node:true */
 module.exports = function ( grunt ) {
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jscs' );
+	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadTasks( './tasks/' );
 
 	grunt.initConfig( {
-		jshint: {
-			options: {
-				jshintrc: true
-			},
+		eslint: {
 			all: [ '*.js', '{tasks,test}/**/*.js' ]
-		},
-		jscs: {
-			src: '<%= jshint.all %>'
 		},
 		stylelint: {
 			simple: {
@@ -29,12 +21,11 @@ module.exports = function ( grunt ) {
 			}
 		},
 		watch: {
-			files: [ '<%= jshint.all %>', '.{jshintrc,jshintignore}' ],
+			files: [ '<%= eslint.all %>', '.{eslintrc.json}' ],
 			tasks: [ 'test' ]
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'jshint', 'jscs' ] );
-	grunt.registerTask( 'test', [ 'lint', 'stylelint' ] );
+	grunt.registerTask( 'test', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'default', 'test' );
 };
