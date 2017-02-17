@@ -1,5 +1,14 @@
 # grunt-stylelint Release History
 
+## v0.7.0 / 2017-02-17
+* Don't over-ride 'formatter' option if set (James D. Forrester)
+* Support for outputfile and custom formatters (Martin Cermak)
+* README: Added basic configuration (M.D. van Es)
+* README: Add failOnError; give full config example (James Forrester)
+* tests: Test for outputFle (Martin Cermak)
+* build: Replace jshint/jscs with eslint (Ed Sanders)
+* build: Bump stylelint dependency from ^7.7.1 to 7.8.0 (James Forrester)
+
 ## v0.6.0 / 2016-07-29
 * Travis CI: Cache NPM modules (Stephen Edgar)
 * Travis CI: Test on latest Node.js v4.x.x and v6.x.x branches (Stephen Edgar)
