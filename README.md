@@ -33,6 +33,7 @@ For more explanations of the lint errors stylelint will throw at you please visi
 
 ### Usage examples
 
+#### Example simple config
 In this example, running `grunt stylelint:all` (or `grunt stylelint` because `stylelint` is a [multi task](http://gruntjs.com/configuring-tasks#task-configuration-and-targets)) will lint the project's CSS and Sass files in the `css` and `sass` directories and their subdirectories, using the default stylelint options or the options specified in the `.stylelintrc` in the root of the project. For an example config see http://stylelint.io/user-guide/example-config/.
 
 ```js
@@ -44,6 +45,31 @@ grunt.initConfig({
 });
 ```
 
+#### Example full config
+A full set of config with default options would be:
+```js
+// Project configuration.
+grunt.initConfig( {
+  stylelint: {
+    options: {
+      configFile: '.stylelintrc',
+      formatter: 'string',
+      ignoreDisables: false,
+      failOnError: true,
+      outputFile: '',
+      reportNeedlessDisables: false,
+      syntax: ''
+    },
+    src: [
+            'src/**/*.{css,less,scss}',
+            …,
+            '!src/badstyles/*.css'
+        ]
+    }
+}
+```
+
+### Options
 The `options` object is passed through to `stylelint`. Options you may wish to set are:
 
 #### formatter
@@ -51,7 +77,7 @@ Type: `function` or `string`
 Default value: `"string"`
 Values: `"string"`|`"verbose"`|`"json"`
 
-Which output format in which you would like results. If `grunt` is run with `--verbose` and this is not explicitly set, it will act as though you passed in `"verbose"`.
+In which output format would you like results. If `grunt` is run with `--verbose` and this is not explicitly set, it will act as though you passed in `"verbose"`.
 
 #### ignoreDisables
 Type: `boolean`
@@ -69,6 +95,12 @@ Type: `boolean`
 Default value: `false`
 
 Whether to ignore inline comments that disable stylelint and report which ones did not block a lint warning.
+
+#### failOnError
+Type: `boolean`
+Default value: `true`
+
+Whether to fail if stylelint detects an error.
 
 #### syntax
 Type: `string`
