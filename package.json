@@ -23,7 +23,7 @@
     "chalk": "1.1.3"
   },
   "peerDependencies": {
-    "stylelint": "7.9.0"
+    "stylelint": "^7.8.0"
   },
   "devDependencies": {
     "eslint-config-wikimedia": "0.3.0",
