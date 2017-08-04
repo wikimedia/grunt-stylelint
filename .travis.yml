@@ -2,14 +2,14 @@ sudo: false
 language: node_js
 cache:
   directories:
+    - $HOME/.npm
     - node_modules
 node_js:
   - "4"
   - "6"
+  - "8"
 before_install:
-  # remove outdated deps, assists with cache maintenance
-  - npm prune
-  - npm update
+  - npm install -g npm@latest
 notifications:
   irc:
     channels:
