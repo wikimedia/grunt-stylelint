@@ -14,8 +14,10 @@ If this is the first time you're using [Grunt](http://gruntjs.com/), the [gettin
 Once you have that installed, with a [Gruntfile](http://gruntjs.com/sample-gruntfile) set for your code, you can install the plugin with:
 
 <pre lang=shell>
-npm install grunt-stylelint --save-dev
+npm install grunt-stylelint stylelint --save-dev
 </pre>
+
+Note that this installs both grunt-stylelint and the stylelint tool itself, which is a peer dependency. If you do not explicitly depend on stylelint in your `package.json` file and do not have it available, grunt-stylelint will not work. Modern versions of npm will warn you of such unmet peer dependencies.
 
 In your Gruntfile, add the line:
 
