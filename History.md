@@ -1,5 +1,10 @@
 # grunt-stylelint Release History
 
+## v0.9.0 / 2017-08-04
+* Travis CI: Use the latest npm 5.x, add Node.js 8.x (Stephen Edgar)
+* README: Explicitly call out stylelint peerDep (James D. Forrester)
+* build: Bump stylelint dependency from &7.8.0 to ^8.0.0 (axten)
+
 ## v0.8.0 / 2017-04-24
 * build: Move stylelint to peer dependencies and upgrade it to the latest version. (Negar Naghshbandi)
 * build: Change stylelint peerDependency to ^7.8.0 (James D. Forrester)
