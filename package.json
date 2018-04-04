@@ -33,6 +33,7 @@
     "grunt-contrib-nodeunit": "1.0.0",
     "grunt-contrib-watch": "1.0.0",
     "grunt-eslint": "19.0.0",
+    "lodash": "4.17.4",
     "stylelint": "9.0.0"
   }
 }
