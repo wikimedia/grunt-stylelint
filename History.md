@@ -1,5 +1,10 @@
 # grunt-stylelint Release History
 
+## v0.10.0 / 2018-04-04
+* Bump stylelint dependency from ^8.0.0 to ^9.0.0 (Nathan Woltman)
+* build: Bump various devDependencies to latest (James D. Forrester)
+* build: Force lodash (dependency of table) to older version (Fixes #49) (James D. Forrester)
+
 ## v0.9.0 / 2017-08-04
 * Travis CI: Use the latest npm 5.x, add Node.js 8.x (Stephen Edgar)
 * README: Explicitly call out stylelint peerDep (James D. Forrester)
