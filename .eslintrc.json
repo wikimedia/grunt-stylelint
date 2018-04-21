@@ -2,7 +2,7 @@
   "parser": "espree",
   "env": {
     "node": true,
-    "es6": false
+    "es6": true
   },
   "globals": {
     "__dirname": true,
