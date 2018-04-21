@@ -1,6 +1,6 @@
 var grunt = require( 'grunt' );
 
-exports.stylelint = {
+module.exports.stylelint = {
 	outputFile: function ( test ) {
 		var actual, expected;
 
