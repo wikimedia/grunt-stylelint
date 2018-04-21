@@ -32,5 +32,9 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# Test results
-tmp
+# Temporary folder
+temp
+target
+
+# IDE project folder
+.idea
