@@ -3,7 +3,7 @@
   "version": "0.11.0-beta.0",
   "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
-    "test": "node ./node_modules/grunt/bin/grunt test"
+    "test": "node ./node_modules/grunt/bin/grunt test --force"
   },
   "repository": {
     "type": "git",
