@@ -2,6 +2,10 @@
   "name": "grunt-stylelint",
   "version": "0.11.0-beta.0",
   "description": "A Grunt checker for CSS files using Stylelint",
+  "main": "tasks/grunt-stylelint.js",
+  "files": [
+    "tasks"
+  ],
   "scripts": {
     "test": "node ./node_modules/grunt/bin/grunt test --force"
   },
