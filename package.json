@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rochejul/grunt-stylelint.git"
+    "url": "git://github.com/wikimedia/grunt-stylelint.git"
   },
   "keywords": [
     "gruntplugin",
@@ -20,9 +20,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rochejul/grunt-stylelint/issues"
+    "url": "https://github.com/wikimedia/grunt-stylelint/issues"
   },
-  "homepage": "https://github.com/rochejul/grunt-stylelint",
+  "homepage": "https://github.com/wikimedia/grunt-stylelint",
   "engines": {
     "node": ">=6",
     "npm": ">=3"
