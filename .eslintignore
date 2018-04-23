@@ -1,0 +1,8 @@
+/build/**
+/coverage/**
+/docs/**
+/jsdoc/**
+/templates/**
+/tmp/**
+Gruntfile.js
+!.eslintrc.js

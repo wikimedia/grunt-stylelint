@@ -1,15 +1,19 @@
-var grunt = require( 'grunt' );
+'use strict';
 
-exports.stylelint = {
-	outputFile: function ( test ) {
-		var actual, expected;
+const grunt = require('grunt');
+const path = require('path');
 
-		test.expect( 1 );
+module.exports.stylelint = {
+  outputFile: function (test) {
+    let actual;
+    let expected;
 
-		actual = grunt.file.read( 'tmp/outputFile/report.txt' );
-		expected = grunt.file.read( 'test/expected/outputFile/report.txt' );
+    test.expect(1);
 
-		test.equal( actual, expected, 'Should report to file.' );
-		test.done();
-	}
+    actual = grunt.file.read(path.resolve(path.join(__dirname, '../tmp/outputFile/report.txt')));
+    expected = grunt.file.read(path.resolve(path.join(__dirname, './expected/outputFile/report.txt')));
+
+    test.equal(actual, expected, 'Should report to file.');
+    test.done();
+  }
 };
