@@ -7,8 +7,6 @@ cache:
 node_js:
   - "6"
   - "8"
-before_install:
-  - npm install -g npm@latest
 notifications:
   irc:
     channels:
