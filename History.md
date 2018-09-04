@@ -1,5 +1,13 @@
 # grunt-stylelint Release History
 
+## v0.10.1 / 2018-09-04
+* Use correct stylelint option name (Stephen Edgar)
+* Add `package-lock.json` to `.gitignore` (Stephen Edgar)
+* Drop testing in Node 4, EOL today (James D. Forrester)
+* build: Remove redundant 'npm@latest' for Travis (Timo Tijhof)
+* build: Add Node 10 to Travis matrix (Timo Tijhof)
+* build: Bump devDependencies to latest (James D. Forrester)
+
 ## v0.10.0 / 2018-04-04
 * Bump stylelint dependency from ^8.0.0 to ^9.0.0 (Nathan Woltman)
 * build: Bump various devDependencies to latest (James D. Forrester)
