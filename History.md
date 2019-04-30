@@ -1,5 +1,12 @@
 # grunt-stylelint Release History
 
+## v0.11.0 / 2019-04-30
+* Bump stylelint dependency from ^9.0.0 to ^10.0.0 (Nathan Woltman)
+* build: Update chalk dependency to the latest version (Nathan Woltman)
+* build: Upgrade grunt from 1.0.3 to 1.0.4 (James D. Forrester)
+* build: Upgrade eslint-config-wikimedia from 0.7.2 to 0.11.0 (James D. Forrester)
+* build: Upgrade lodash from 4.17.10 to 4.17.11 (James D. Forrester)
+
 ## v0.10.1 / 2018-09-04
 * Use correct stylelint option name (Stephen Edgar)
 * Add `package-lock.json` to `.gitignore` (Stephen Edgar)
