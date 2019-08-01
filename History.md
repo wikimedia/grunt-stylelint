@@ -1,5 +1,8 @@
 # grunt-stylelint Release History
 
+## v0.11.1 / 2019-07-31
+* Don't break but short-circuit when no files are passed in (James D. Forrester)
+
 ## v0.11.0 / 2019-04-30
 * Bump stylelint dependency from ^9.0.0 to ^10.0.0 (Nathan Woltman)
 * build: Update chalk dependency to the latest version (Nathan Woltman)
