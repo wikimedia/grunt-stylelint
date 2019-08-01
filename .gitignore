@@ -34,6 +34,3 @@ node_modules
 
 # Test results
 tmp
-
-# Ignore npm lock file
-package-lock.json

@@ -27,6 +27,13 @@ module.exports = function ( grunt ) {
 				},
 				src: 'test/simple/**/*.{css,less}'
 			},
+			empty: {
+				options: {
+					configFile: 'test/empty/.stylelintrc',
+					syntax: 'less'
+				},
+				src: 'test/empty/**/*.{css,less}'
+			},
 			testOutputFile: {
 				options: {
 					outputFile: 'tmp/outputFile/report.txt',

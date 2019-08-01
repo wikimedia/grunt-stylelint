@@ -31,6 +31,9 @@ module.exports = function ( grunt ) {
 		} );
 		options.formatter = options.formatter || ( verbose ? 'verbose' : 'string' );
 
+		// Explicitly allow no files, as otherwise stylelint itself throws an error.
+		options.allowEmptyInput = true;
+
 		styleLint.lint( options ).then( function ( data ) {
 			var warningsCount = 0;
 
