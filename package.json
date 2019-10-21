@@ -20,19 +20,19 @@
   },
   "homepage": "https://github.com/wikimedia/grunt-stylelint",
   "dependencies": {
-    "chalk": "2.4.2"
+    "chalk": "^2.4.2"
   },
   "peerDependencies": {
-    "stylelint": "^10.0.0"
+    "stylelint": "^11.0.0"
   },
   "devDependencies": {
     "eslint-config-wikimedia": "0.14.1",
     "grunt": "1.0.4",
-    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-nodeunit": "2.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-eslint": "22.0.0",
     "lodash": "4.17.15",
-    "stylelint": "10.0.0"
+    "stylelint": "11.0.0"
   }
 }
