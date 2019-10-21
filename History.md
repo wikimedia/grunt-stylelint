@@ -1,5 +1,9 @@
 # grunt-stylelint Release History
 
+## v0.12.0 / 2019-10-21
+* Bump stylelint dependency from ^10.0.0 to ^11.0.0 (Nathan Woltman)
+* build: Upgrade eslint-config-wikimedia from 0.13.1 to 0.14.3 (James D. Forrester)
+
 ## v0.11.1 / 2019-07-31
 * Don't break but short-circuit when no files are passed in (James D. Forrester)
 

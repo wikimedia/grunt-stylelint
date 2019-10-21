@@ -1,6 +1,6 @@
 {
   "name": "grunt-stylelint",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
     "test": "grunt test"
@@ -26,7 +26,7 @@
     "stylelint": "^11.0.0"
   },
   "devDependencies": {
-    "eslint-config-wikimedia": "0.14.1",
+    "eslint-config-wikimedia": "0.14.3",
     "grunt": "1.0.4",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-nodeunit": "2.0.0",
