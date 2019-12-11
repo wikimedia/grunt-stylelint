@@ -1,5 +1,9 @@
 # grunt-stylelint Release History
 
+## v0.13.0 / 2019-09-11
+* Bump stylelint dependency from ^11.0.0 to ^12.0.0 (Lars Laade)
+* build: Replace handlebars in sub-dependencies for npm audit's happiness (James D. Forrester)
+
 ## v0.12.0 / 2019-10-21
 * Bump stylelint dependency from ^10.0.0 to ^11.0.0 (Nathan Woltman)
 * build: Upgrade eslint-config-wikimedia from 0.13.1 to 0.14.3 (James D. Forrester)
