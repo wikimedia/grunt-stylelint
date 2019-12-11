@@ -1,6 +1,6 @@
 {
   "name": "grunt-stylelint",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
     "test": "grunt test"
