@@ -1,5 +1,9 @@
 # grunt-stylelint Release History
 
+## v0.14.0 / 2020-02-14
+* Require stylelint 13.2.0, up from 12.0.0 (James D. Forrester)
+* build: Upgrade grunt-contrib-nodeunit from 2.0.0 to 2.1.0 for security issue (James D. Forrester)
+
 ## v0.13.0 / 2019-09-11
 * Bump stylelint dependency from ^11.0.0 to ^12.0.0 (Lars Laade)
 * build: Replace handlebars in sub-dependencies for npm audit's happiness (James D. Forrester)
