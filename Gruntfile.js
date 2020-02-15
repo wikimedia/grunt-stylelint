@@ -38,6 +38,7 @@ module.exports = function ( grunt ) {
 				options: {
 					outputFile: 'tmp/outputFile/report.txt',
 					configFile: 'test/simple/.stylelintrc',
+					stripANSI: true,
 					syntax: 'less',
 					failOnError: false
 				},
