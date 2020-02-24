@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
-    "test": "grunt test"
+    "test": "env FORCE_COLOR=0 grunt test"
   },
   "repository": {
     "type": "git",
