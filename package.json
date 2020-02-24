@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wikimedia/grunt-stylelint",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^3.0.0"
   },
   "peerDependencies": {
     "stylelint": "^13.2.0"
