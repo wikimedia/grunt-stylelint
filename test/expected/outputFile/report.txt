@@ -1,4 +1,4 @@
 
-[4mtest/output/simpleRule.css[24m
- [2m2:9[22m  [31m[31m✖[39m[31m[39m  Expected "#DDD" to be "#ddd"   [2mcolor-hex-case[22m
+test/output/simpleRule.css
+ 2:9  ✖  Expected "#DDD" to be "#ddd"   color-hex-case
 
