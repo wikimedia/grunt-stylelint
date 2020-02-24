@@ -60,7 +60,6 @@ grunt.initConfig( {
       failOnError: true,
       outputFile: '',
       reportNeedlessDisables: false,
-      stripANSI: false,
       syntax: ''
     },
     src: [
@@ -104,12 +103,6 @@ Type: `boolean`
 Default value: `true`
 
 Whether to fail if stylelint detects an error.
-
-#### stripANSI
-Type: `boolean`
-Default value: `false`
-
-Whether to strip ANSI terminal codes from the output.
 
 #### syntax
 Type: `string`

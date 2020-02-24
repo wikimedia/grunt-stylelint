@@ -1,8 +1,7 @@
 /*!
  * Run CSS files through stylelint and complain
  */
-var chalk = require( 'chalk' ),
-	stripAnsi = require( 'strip-ansi' );
+var chalk = require( 'chalk' );
 
 module.exports = function ( grunt ) {
 
@@ -10,11 +9,7 @@ module.exports = function ( grunt ) {
 		return ( count === 1 ? word : word + 's' );
 	}
 
-	function output( outputFile, report, func, stripANSI ) {
-		if ( stripANSI ) {
-			report = stripAnsi( report );
-		}
-
+	function output( outputFile, report, func ) {
 		if ( outputFile ) {
 			grunt.file.write( outputFile, report );
 			grunt.log.writeln( 'Report written to ' + outputFile );
@@ -44,11 +39,11 @@ module.exports = function ( grunt ) {
 
 			if ( data.output ) {
 				if ( verbose ) {
-					output( options.outputFile, data.output, grunt.log.write, options.stripANSI );
+					output( options.outputFile, data.output, grunt.log.write );
 				} else if ( data.errored ) {
-					output( options.outputFile, data.output, grunt.log.write, options.stripANSI );
+					output( options.outputFile, data.output, grunt.log.write );
 				} else {
-					output( options.outputFile, data.output, grunt.log.ok, options.stripANSI );
+					output( options.outputFile, data.output, grunt.log.ok );
 				}
 			}
 
