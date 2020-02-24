@@ -5,7 +5,6 @@
 module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-nodeunit' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadTasks( './tasks/' );
 
@@ -43,10 +42,6 @@ module.exports = function ( grunt ) {
 				},
 				src: 'test/output/**/*.{css,less}'
 			}
-		},
-		watch: {
-			files: [ '<%= eslint.all %>', '.{eslintrc.json}' ],
-			tasks: [ 'test' ]
 		}
 	} );
 

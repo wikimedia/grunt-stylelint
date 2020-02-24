@@ -3,7 +3,7 @@
   "version": "0.14.0",
   "description": "A Grunt checker for CSS files using Stylelint",
   "scripts": {
-    "test": "grunt test"
+    "test": "env FORCE_COLOR=0 grunt test"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,6 @@
     "grunt": "1.0.4",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-nodeunit": "2.1.0",
-    "grunt-contrib-watch": "1.1.0",
     "grunt-eslint": "22.0.0",
     "lodash": "4.17.15",
     "stylelint": "13.2.0"
