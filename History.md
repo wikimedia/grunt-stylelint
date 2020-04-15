@@ -1,5 +1,11 @@
 # grunt-stylelint Release History
 
+## v0.15.0 / 2020-04-15
+* Require stylelint 13.3.2, up from 13.2.0 (James D. Forrester)
+* Upgrade chalk dependency from ^2.4.2 to ^3.0.0 (James D. Forrester)
+* build: Replace Travis with GitHub Actions (James D. Forrester)
+* build: Bump devDependencies to latest (James D. Forrester)
+
 ## v0.14.0 / 2020-02-14
 * Require stylelint 13.2.0, up from 12.0.0 (James D. Forrester)
 * build: Upgrade grunt-contrib-nodeunit from 2.0.0 to 2.1.0 for security issue (James D. Forrester)
