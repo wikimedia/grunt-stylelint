@@ -1,7 +1,10 @@
 /*!
  * Run CSS files through stylelint and complain
  */
-var chalk = require( 'chalk' );
+
+'use strict';
+
+const chalk = require( 'chalk' );
 
 module.exports = function ( grunt ) {
 
@@ -19,7 +22,7 @@ module.exports = function ( grunt ) {
 	}
 
 	grunt.registerMultiTask( 'stylelint', function () {
-		var options = this.options(),
+		const options = this.options(),
 			done = this.async(),
 			styleLint = require( 'stylelint' ),
 			verbose = !!grunt.option( 'verbose' );
@@ -35,8 +38,6 @@ module.exports = function ( grunt ) {
 		options.allowEmptyInput = true;
 
 		styleLint.lint( options ).then( function ( data ) {
-			var warningsCount = 0;
-
 			if ( data.output ) {
 				if ( verbose ) {
 					output( options.outputFile, data.output, grunt.log.write );
@@ -47,7 +48,7 @@ module.exports = function ( grunt ) {
 				}
 			}
 
-			warningsCount = data.results.reduce( function ( count, item ) {
+			const warningsCount = data.results.reduce( function ( count, item ) {
 				return ( count + item.warnings.length );
 			}, 0 );
 
