@@ -25,13 +25,17 @@ module.exports = function ( grunt ) {
 		const options = this.options(),
 			done = this.async(),
 			styleLint = require( 'stylelint' ),
-			verbose = !!grunt.option( 'verbose' );
+			verbose = !!grunt.option( 'verbose' ),
+			fix = !!grunt.option( 'fix' );
 
-		options.failOnError = ( typeof options.failOnError !== 'undefined' ) ? options.failOnError : true;
+		options.failOnError = options.failOnError !== undefined ? options.failOnError : true;
+
+		options.fix = options.fix !== undefined ? options.fix : fix;
 
 		options.files = this.filesSrc.filter( function ( file ) {
 			return grunt.file.isFile( file );
 		} );
+
 		options.formatter = options.formatter || ( verbose ? 'verbose' : 'string' );
 
 		// Explicitly allow no files, as otherwise stylelint itself throws an error.
