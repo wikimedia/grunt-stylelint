@@ -60,6 +60,7 @@ grunt.initConfig( {
       failOnError: true,
       outputFile: '',
       reportNeedlessDisables: false,
+      fix: false,
       syntax: ''
     },
     src: [
@@ -103,6 +104,12 @@ Type: `boolean`
 Default value: `true`
 
 Whether to fail if stylelint detects an error.
+
+#### syntax
+Type: `boolean`
+Default value: `false`
+
+Automatically fix, where possible, violations reported by rules. If `grunt` is run with `--fix` and this is not explicitly set, it will be set to `true`.
 
 #### syntax
 Type: `string`
