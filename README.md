@@ -105,7 +105,7 @@ Default value: `true`
 
 Whether to fail if stylelint detects an error.
 
-#### syntax
+#### fix
 Type: `boolean`
 Default value: `false`
 
