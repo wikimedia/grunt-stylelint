@@ -52,20 +52,44 @@ module.exports = function ( grunt ) {
 				}
 			}
 
-			const warningsCount = data.results.reduce( function ( count, item ) {
-				return ( count + item.warnings.length );
+			let warningsCount = 0;
+
+			if ( data.needlessDisables ) {
+				data.needlessDisables.forEach( function ( nd ) {
+					if ( nd.ranges.length ) {
+						grunt.log.writeln();
+						grunt.log.writeln(
+							chalk.underline( nd.source )
+						);
+						nd.ranges.forEach( function ( range ) {
+							warningsCount++;
+							grunt.log.writeln(
+								chalk.yellow( 'Needless disable: ' ) +
+								range.unusedRule +
+								', start line: ' + range.start +
+								', end line: ' + range.end
+							);
+						} );
+					}
+				} );
+			}
+
+			warningsCount += data.results.reduce( function ( count, item ) {
+				return count + item.warnings.length;
 			}, 0 );
 
-			if ( !data.errored ) {
+			if ( warningsCount ) {
+				grunt.log.writeln();
+				grunt.log.writeln( chalk.yellow.bold( [
+					'⚠ ', warningsCount, pluralize( ' warning', warningsCount ), '\n'
+				].join( '' ) ) );
+			}
+
+			if ( data.errored ) {
+				done( !options.failOnError );
+			} else {
 				grunt.log.ok( 'Linted ' + options.files.length + ' files without errors' );
 				done();
-			} else {
-				if ( options.failOnError && warningsCount > 0 ) {
-					grunt.log.writeln( chalk.red.bold( [
-						'\u2716 ', warningsCount, pluralize( ' problem', warningsCount ), '\n'
-					].join( '' ) ) );
-				}
-				done( !options.failOnError );
 			}
 		}, function ( err ) {
 			grunt.fail.warn( 'Running stylelint failed\n' + err.stack.toString() );
