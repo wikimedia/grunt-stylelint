@@ -1,5 +1,13 @@
 # grunt-stylelint Release History
 
+## v0.16.0 / 2020-04-15
+* Drop Node 8 support (Ed Sanders)
+* Require stylelint 13.7.0, up from 13.3.2 (Ed Sanders, James D. Forrester)
+* Upgrade chalk dependency from ^3.0.0 to ^4.1.0 (Ed Sanders)
+* Report needless disables (Ed Sanders)
+* Pass through --fix to stylelint options (Ed Sanders)
+* README: Fix label of 'fix' option, copy-pasted as 'syntax' (i alarmed alien)
+
 ## v0.15.0 / 2020-04-15
 * Require stylelint 13.3.2, up from 13.2.0 (James D. Forrester)
 * Upgrade chalk dependency from ^2.4.2 to ^3.0.0 (James D. Forrester)
