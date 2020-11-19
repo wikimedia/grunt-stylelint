@@ -52,29 +52,7 @@ module.exports = function ( grunt ) {
 				}
 			}
 
-			let warningsCount = 0;
-
-			if ( data.needlessDisables ) {
-				data.needlessDisables.forEach( function ( nd ) {
-					if ( nd.ranges.length ) {
-						grunt.log.writeln();
-						grunt.log.writeln(
-							chalk.underline( nd.source )
-						);
-						nd.ranges.forEach( function ( range ) {
-							warningsCount++;
-							grunt.log.writeln(
-								chalk.yellow( 'Needless disable: ' ) +
-								range.unusedRule +
-								', start line: ' + range.start +
-								', end line: ' + range.end
-							);
-						} );
-					}
-				} );
-			}
-
-			warningsCount += data.results.reduce( function ( count, item ) {
+			const warningsCount = data.results.reduce( function ( count, item ) {
 				return count + item.warnings.length;
 			}, 0 );
 
