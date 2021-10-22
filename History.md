@@ -1,5 +1,10 @@
 # grunt-stylelint Release History
 
+## v0.17.0 / 2021-10-21
+* Drop Node 10 support (James D. Forrester)
+* Require stylelint 14.0.0, up from 13.8.0 (James D. Forrester)
+* build: Bump various devDependencies to latest (James D. Forrester)
+
 ## v0.16.0 / 2020-11-19
 * Drop Node 8 support (Ed Sanders)
 * Require stylelint 13.8.0, up from 13.3.2 (Ed Sanders, James D. Forrester)
