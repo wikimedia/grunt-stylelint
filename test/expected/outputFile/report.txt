@@ -1,4 +1,4 @@
 
 test/output/simpleRule.css
- 2:9  ✖  Expected "#DDD" to be "#ddd"   color-hex-case
+ 2:9  ✖  Expected "#DDD" to be "#ddd"  color-hex-case
 

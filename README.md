@@ -110,9 +110,3 @@ Type: `boolean`
 Default value: `false`
 
 Automatically fix, where possible, violations reported by rules. If `grunt` is run with `--fix` and this is not explicitly set, it will be set to `true`.
-
-#### syntax
-Type: `string`
-Values: `"scss"`|`"less"`|`"sugarss"`
-
-Which syntax standard should be used to parse source stylesheets. If this is unset, `stylelint` will attempt to guess which syntax is used by the files' extensions.
