@@ -23,7 +23,7 @@
     "chalk": "^4.1.2"
   },
   "peerDependencies": {
-    "stylelint": "^14.4.0"
+    "stylelint": "14.x"
   },
   "engines": {
     "node": ">=12"
@@ -35,7 +35,8 @@
     "grunt-contrib-nodeunit": "4.0.0",
     "grunt-eslint": "24.0.0",
     "lodash": "4.17.21",
-    "stylelint": "^14.4.0",
-    "stylelint-less": "^1.0.1"
+    "postcss-less": "^6.0.0",
+    "stylelint": "^14.5.0",
+    "stylelint-less": "^1.0.3"
   }
 }
