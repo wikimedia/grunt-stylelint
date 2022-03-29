@@ -1,5 +1,10 @@
 # grunt-stylelint Release History
 
+## v0.18.0 / 2022-03-29
+* Update stylelint to 14.5.0 (Виктор Виктор)
+* build: Bump stylelint-less from ^1.0.3 to ^1.0.5 (James D. Forrester)
+* build: Add codeql code scanning tool to CI (James D. Forrester)
+
 ## v0.17.0 / 2021-10-21
 * Drop Node 10 support (James D. Forrester)
 * Require stylelint 14.0.0, up from 13.8.0 (James D. Forrester)
