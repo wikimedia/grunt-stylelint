@@ -23,15 +23,13 @@ module.exports = function ( grunt ) {
 		stylelint: {
 			simple: {
 				options: {
-					configFile: 'test/simple/.stylelintrc',
-					syntax: 'less'
+					configFile: 'test/simple/.stylelintrc'
 				},
 				src: 'test/simple/**/*.{css,less}'
 			},
 			empty: {
 				options: {
-					configFile: 'test/empty/.stylelintrc',
-					syntax: 'less'
+					configFile: 'test/empty/.stylelintrc'
 				},
 				src: 'test/empty/**/*.{css,less}'
 			},
@@ -39,7 +37,6 @@ module.exports = function ( grunt ) {
 				options: {
 					outputFile: 'tmp/outputFile/report.txt',
 					configFile: 'test/simple/.stylelintrc',
-					syntax: 'less',
 					failOnError: false
 				},
 				src: 'test/output/**/*.{css,less}'
