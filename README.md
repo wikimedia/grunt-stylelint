@@ -1,7 +1,4 @@
 [![NPM version](https://badge.fury.io/js/grunt-stylelint.svg)](http://badge.fury.io/js/grunt-stylelint)
-[![Build Status](https://travis-ci.org/wikimedia/grunt-stylelint.svg?branch=master)](https://travis-ci.org/wikimedia/grunt-stylelint)
-[![dependencies Status](https://david-dm.org/wikimedia/grunt-stylelint/status.svg)](https://david-dm.org/wikimedia/grunt-stylelint)
-[![devDependencies Status](https://david-dm.org/wikimedia/grunt-stylelint/dev-status.svg)](https://david-dm.org/wikimedia/grunt-stylelint?type=dev)
 [![NPM Downloads](https://img.shields.io/npm/dm/grunt-stylelint.svg)](https://www.npmjs.org/package/grunt-stylelint)
 
 # grunt-stylelint
