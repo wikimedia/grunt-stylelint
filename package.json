@@ -26,7 +26,7 @@
     "stylelint": "14.x"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "devDependencies": {
     "eslint-config-wikimedia": "0.22.1",
