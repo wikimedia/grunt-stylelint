@@ -36,7 +36,7 @@ module.exports = function ( grunt ) {
 			testOutputFile: {
 				options: {
 					outputFile: 'tmp/outputFile/report.txt',
-					configFile: 'test/simple/.stylelintrc',
+					configFile: 'test/output/.stylelintrc',
 					failOnError: false
 				},
 				src: 'test/output/**/*.{css,less}'

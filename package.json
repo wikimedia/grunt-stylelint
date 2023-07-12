@@ -1,42 +1,41 @@
 {
-  "name": "grunt-stylelint",
-  "version": "0.18.0",
-  "description": "A Grunt checker for CSS files using Stylelint",
-  "scripts": {
-    "test": "env NO_COLOR=1 grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/wikimedia/grunt-stylelint.git"
-  },
-  "keywords": [
-    "gruntplugin",
-    "checker",
-    "stylelint"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wikimedia/grunt-stylelint/issues"
-  },
-  "homepage": "https://github.com/wikimedia/grunt-stylelint",
-  "dependencies": {
-    "chalk": "^4.1.2"
-  },
-  "peerDependencies": {
-    "stylelint": "14.x"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "devDependencies": {
-    "eslint-config-wikimedia": "0.22.1",
-    "grunt": "1.5.3",
-    "grunt-contrib-clean": "2.0.0",
-    "grunt-contrib-nodeunit": "4.0.0",
-    "grunt-eslint": "24.0.0",
-    "lodash": "4.17.21",
-    "postcss-less": "^6.0.0",
-    "stylelint": "^14.5.0",
-    "stylelint-less": "^1.0.5"
-  }
+	"name": "grunt-stylelint",
+	"version": "0.18.0",
+	"description": "A Grunt checker for CSS files using Stylelint",
+	"scripts": {
+		"test": "env NO_COLOR=1 grunt test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/wikimedia/grunt-stylelint.git"
+	},
+	"keywords": [
+		"gruntplugin",
+		"checker",
+		"stylelint"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/wikimedia/grunt-stylelint/issues"
+	},
+	"homepage": "https://github.com/wikimedia/grunt-stylelint",
+	"dependencies": {
+		"chalk": "^4.1.2"
+	},
+	"peerDependencies": {
+		"stylelint": "15.x"
+	},
+	"engines": {
+		"node": ">=16"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.25.1",
+		"grunt": "1.6.1",
+		"grunt-contrib-clean": "2.0.1",
+		"grunt-contrib-nodeunit": "5.0.0",
+		"grunt-eslint": "24.2.0",
+		"lodash": "4.17.21",
+		"postcss-less": "^6.0.0",
+		"stylelint": "^15.10.1"
+	}
 }
