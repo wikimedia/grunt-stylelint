@@ -1,5 +1,9 @@
 # grunt-stylelint Release History
 
+## v0.19.0 / 2023-07-12
+* Raise stylelint requirement from 14.x to 15.x (James D. Forrester)
+* build: Drop Node.js version 12.x and 14.x, update to '16.x, 18.x' (James D. Forrester)
+
 ## v0.18.0 / 2022-03-29
 * Update stylelint to 14.5.0 (Виктор Виктор)
 * build: Bump stylelint-less from ^1.0.3 to ^1.0.5 (James D. Forrester)
