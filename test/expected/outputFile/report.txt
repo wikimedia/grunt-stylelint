@@ -1,4 +1,6 @@
 
 test/output/simpleRule.css
- 2:9  ✖  Expected "#DDD" to be "#ddd"  color-hex-case
+ 2:9  ✖  Unexpected invalid hex color "#DDQ"  color-no-invalid-hex
+
+1 problem (1 error, 0 warnings)
 

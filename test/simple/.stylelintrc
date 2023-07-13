@@ -1,7 +1,6 @@
 {
-	"plugins": ["stylelint-less"],
 	"customSyntax": "postcss-less",
 	"rules": {
-		"color-hex-case": [ "lower" ],
+		"color-no-invalid-hex": true,
 	}
 }
