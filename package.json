@@ -1,6 +1,6 @@
 {
 	"name": "grunt-stylelint",
-	"version": "0.19.0",
+	"version": "0.20.0",
 	"description": "A Grunt checker for CSS files using Stylelint",
 	"scripts": {
 		"test": "env NO_COLOR=1 grunt test"
