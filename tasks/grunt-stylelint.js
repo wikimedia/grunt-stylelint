@@ -41,6 +41,9 @@ module.exports = function ( grunt ) {
 		// Explicitly allow no files, as otherwise stylelint itself throws an error.
 		options.allowEmptyInput = true;
 
+		// Hide the warning from Stylelint that we're using it in CJS mode.
+		options.quietDeprecationWarnings = true;
+
 		styleLint.lint( options ).then( function ( data ) {
 			if ( data.output ) {
 				if ( verbose ) {
