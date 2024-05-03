@@ -1,5 +1,11 @@
 # grunt-stylelint Release History
 
+## v0.20.0 / 2024-05-03
+* Drop Node.js 16 support (James D. Forrester)
+* Switch to stylelint 16.x (in CommonJS mode) (James D. Forrester)
+* build: Upgrade eslint-config-wikimedia to 0.27.0 (James D. Forrester)
+* build: Upgrade grunt-contrib-nodeunit to d73c0771a pre-release for security issues (James D. Forrester)
+
 ## v0.19.0 / 2023-07-12
 * Raise stylelint requirement from 14.x to 15.x (James D. Forrester)
 * build: Drop Node.js version 12.x and 14.x, update to '16.x, 18.x' (James D. Forrester)
